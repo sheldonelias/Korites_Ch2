@@ -1,4 +1,3 @@
-1
 """
 PARC: Point Arc
 """
@@ -8,7 +7,6 @@ import matplotlib.pyplot as plt
 
 def arc():
     circular_arc()
-
 
 
 def circular_arc():
