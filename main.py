@@ -1,7 +1,7 @@
 import circular_arc
-import vector
-import rotation
-import translate
+#import vector
+#import rotation
+#import translate
 
 def main():
     circular_arc.arc()

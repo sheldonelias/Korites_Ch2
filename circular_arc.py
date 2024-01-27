@@ -45,5 +45,3 @@ def circular_arc():
     plt.text(xc + r * np.cos(p1) + 4, yc + r * np.sin(p1) - 4, '({:.3f},{:.3f})'.format(xc + r * np.cos(p1), yc + r * np.sin(p1)), color='r')
     plt.text(xc + r * np.cos(p2) + 4, yc + r * np.sin(p2) - 4, '({:.3f},{:.3f})'.format(xc + r * np.cos(p2), yc + r * np.sin(p2)), color='r')
     plt.show()
-
-arc()

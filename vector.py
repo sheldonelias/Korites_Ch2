@@ -83,5 +83,3 @@ def vector():
     plt.plot([x_start, x_end], [y_start, y_end], color='purple')
 
     plt.show()
-
-vector()
