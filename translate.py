@@ -7,7 +7,7 @@ def translate():
     # triangle_static()
     # translate_triangle_by_addition_statements()
     # translate_triangle_by_list_comprehension()
-    translate_box_by_nparray_addition()
+    # translate_box_by_nparray_addition()
     # translate_box_by_nparray_dxscalar()
     # translate_diagonal_box()
     pass
@@ -39,7 +39,7 @@ def triangle_static():
     #————————————————————————————additive translate triangle
 
 
-def translate_triangle_by_addition_statements():
+def translate_triangle_by_addition():
     x1 = -10
     x2 = 140
     y1 = 90
@@ -256,7 +256,7 @@ def translate_triangle_horizontal_List_comprehension():
 Quiz 2 Review | Problem 7
 '''
 
-def translate_diagonal_box():
+def translate_diagonal_box_quiz2_review():
     figure, axes = plt.subplots()
     axes.set_aspect(1)
     box_edge_length = 5
