@@ -1,9 +1,9 @@
+import rotation
 import vector
 import circular_arc
 #import rotation
 import translate
 import ellipse
-import ellipse_model
 
 #Test message, and more
 
@@ -15,8 +15,11 @@ def main():
     #circular_arc.circular_arc()
 
     #ELLIPSE
-    #ellipse.ellipses()
-    ellipse.ellipse_model()
+    ellipse.ellipse_algebraic()
+    # ellipse.ellipse_trig1()
+    # ellipse.ellipse_trig2()
+    # ellipse.ellipse_disc_trig()
+
 
     #TRANSLATION
     #translate.triangle_static()
@@ -29,7 +32,7 @@ def main():
     #translate.translate_diagonal_box_quiz2_review()
 
     #ROTATION
-    rotation.rotation()
+    #rotation.rotation()
 
     pass
 
