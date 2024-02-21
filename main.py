@@ -15,11 +15,11 @@ def main():
     #circular_arc.circular_arc()
 
     #ELLIPSE
-    ellipse.ellipse_algebraic()
+    # ellipse.ellipse_algebraic()
     # ellipse.ellipse_trig1()
     # ellipse.ellipse_trig2()
     # ellipse.ellipse_disc_trig()
-
+    ellipse.ellipse_arc()
 
     #TRANSLATION
     #translate.triangle_static()
