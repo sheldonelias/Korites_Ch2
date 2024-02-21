@@ -54,6 +54,7 @@ def ellipse_algebraic():
     plt.text(58, -3, 'x')
     plt.text(-5, 44, 'y')
 
+    # ellipse start here
     a = 20 # x-radius
     b = 40 # y-radius
     xp1 = -a # sets first angle drawing start on opposite sides
@@ -69,7 +70,7 @@ def ellipse_algebraic():
         yp = b * (1 - xp ** 2 / a ** 2) ** .5
         # draws lines
         plt.plot([xplast, xp], [yplast, yp], linewidth=1, color='g')
-        plt.plot([xplast, xp], [-yplast, -yp], linewidth=1, color='g')
+        plt.plot([xplast, xp], [-yplast, -yp], linewidth=1, color='b')
         # passes value from current to last to be used by next value
         xplast = xp
         yplast = yp
@@ -111,9 +112,7 @@ def ellipse_disc_trig():
         if p > np.pi / 2:
             xp = -xp # try commenting this out
             pass
-        # The plot line draws a straight vertical line where x is same, and y is equal
-        # lengths from below and above x-axis, and thus the top and bottom
-        # Try setting either yp or -yp to zero
+
         plt.plot([xp, xp], [yp, -yp], linewidth=1, color='b')
 
     plt.show()
@@ -210,8 +209,8 @@ def ellipse_arc():
     plt.text(58, -3, 'x')
     plt.text(-5, 40, 'y')
 
-    start_angle = 0
-    end_angle = 180 # must go to 181 to get the last little line if dp is about 250
+    start_angle = 27
+    end_angle = 93 # must go to 181 to get the last little line if dp is about 250
 
     a = 50.  # Sets the horizonal radius [0 to +4-60]
     b = 30.  # Sets the vertical radius [0 to +/-40]
@@ -236,7 +235,7 @@ def ellipse_arc():
                 # plots top half
                 plt.plot([xplast, xp], [yplast, yp], color='r')
                 # plot bottom half
-                plt.plot([xplast, xp], [-yplast, -yp], color='g')
+                # plt.plot([xplast, xp], [-yplast, -yp], color='g')
 
             xplast = xp
             yplast = yp
