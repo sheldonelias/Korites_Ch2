@@ -1,6 +1,6 @@
 import vector
 import circular_arc
-import rotation
+#import rotation
 import translate
 import ellipse
 import ellipse_model
@@ -16,7 +16,7 @@ def main():
 
     #ELLIPSE
     #ellipse.ellipses()
-    #ellipse.ellipse_model()
+    ellipse.ellipse_model()
 
     #TRANSLATION
     #translate.triangle_static()
