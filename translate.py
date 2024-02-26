@@ -119,13 +119,12 @@ def box_translation():
 
     for x_val in np.arange(0, xc_end, dx):
         x_vertices = [x_val, x_val , x_val + edge_length, x_val + edge_length, x_val ]
-        y_vertices = [yc_start - x_val, yc_start - edge_length - x_val, yc_start - edge_length - x_val, \
-                      yc_start - x_val, yc_start - x_val]
+        y_vertices = [yc_start, yc_start - edge_length, yc_start - edge_length, \
+                      yc_start, yc_start]
 
         print('x_vals:', x_vertices)
         print('y_vals:', y_vertices)
         plt.plot(x_vertices, y_vertices, 'b')
-
 
     plt.show()
     
@@ -150,11 +149,13 @@ def translate_box_by_nparray_addition():
     x_vals = [0, 0, 10, 10, 0]
 
     x_vals_arr = np.array(x_vals)
+    y_vals_arr = np.array(y_vals)
 
     for moves in range(10):
         print('x_vals_arr:', x_vals_arr)
         x_vals_arr += dx
-        plt.plot(x_vals_arr, y_vals, 'b')
+        y_vals_arr += (dx - 10) * -moves
+        plt.plot(x_vals_arr, y_vals_arr, 'b')
         print(x_vals_arr[len(x_vals_arr)-1], y_vals[len(y_vals)-1])
 
     plt.show()
@@ -187,7 +188,7 @@ def translate_box_by_nparray_dxscalar():
 
     for scalar in range(10):
         x_vals_arr += scalar * dx
-        y_vals_arr += scalar * dy
+        y_vals_arr += (-scalar + 4) * (dy + 2)
         print('x_vals_arr:', x_vals_arr)
         plt.plot(x_vals_arr, y_vals_arr, 'b')
 

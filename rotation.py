@@ -79,7 +79,7 @@ def rotz(xc, yc, xp, yp, rz):  # ——–xp,yp=un-rotated coordinates relative 
     return [xg, yg]
 
 
-def rotation():
+def rotation(xp, yp):
     plt.axis([-10, 140, 90, -10])
     plt.axis('on')
     plt.grid(True)
@@ -100,10 +100,6 @@ def rotation():
     plt.text(xc + 3, yc - 2, '(xc,yc)')
 
 
-    # Coordinates of first Point 1 relative to xc,yc
-    xp = 60
-    yp = 0
-
     # PLOT POINT 1
     rz = 0
     rz = rz * np.pi / 180
@@ -115,39 +111,39 @@ def rotation():
     # PLOT POINT 2
     rz = 30
     rz = rz * np.pi / 180
-    xg, yg = np_rotz(xc, yc, xp, yp, rz)
+    [xg, yg] = np_rotz(xc, yc, xp, yp, rz)
     plt.scatter(xg, yg, s=30, color='grey')
     plt.text(xg + 1, yg + 6, 'P2', color='grey')
 
 
     # PLOT POINT 3
-    rz = 60
-    rz = rz * np.pi / 180
-    [xg, yg] = np_rotz(xc, yc, xp, yp, rz)
-    plt.scatter(xg, yg, s=30, color='r')
-    plt.text(xg + 1, yg + 6, 'P3', color='r')
-    xpp3 = xg  # ——save for later in line 76
-    ypp3 = yg
+    # rz = 60
+    # rz = rz * np.pi / 180
+    # [xg, yg] = np_rotz(xc, yc, xp, yp, rz)
+    # plt.scatter(xg, yg, s=30, color='r')
+    # plt.text(xg + 1, yg + 6, 'P3', color='grey')
+    # xpp3 = xg  # ——save for later in line 76
+    # ypp3 = yg
 
 
     # PLOT POINT 4
-    rz = 90
-    rz = rz * np.pi / 180
-    [xg, yg] = np_rotz(xc, yc, xp, yp, rz)  # was [xg,yg]=rotz(xp1,yp1,rz)
-    plt.scatter(xg, yg, s=30, color='grey')
-    plt.text(xg + 1, yg + 6, 'P4', color='grey')  # plt.text(xp2+1,yp2+6,'P4',color='grey')
+    # 3rz = 90
+    # rz = rz * np.pi / 180
+    # [xg, yg] = np_rotz(xc, yc, xp, yp, rz)  # was [xg,yg]=rotz(xp1,yp1,rz)
+    # plt.scatter(xg, yg, s=30, color='grey')
+    # plt.text(xg + 1, yg + 6, 'P4', color='grey')  # plt.text(xp2+1,yp2+6,'P4',color='grey')
 
 
     # PLOT VECTORS TO POINTS
-    plt.arrow(0, 0, xc - 4, yc - 1, head_length=4, head_width=2, color='k')
-    plt.text(28, 6, r'$\mathbf{C}$', color='k')
+    # plt.arrow(0, 0, xc - 4, yc - 1, head_length=4, head_width=2, color='k')
+    # plt.text(28, 6, r'$\mathbf{C}$', color='k')
 
-    plt.arrow(0, 0, xpp3 - 3, ypp3 - 3, head_length=4, head_width=2, color='b')
-    plt.text(45, 50, r'$\mathbf{Pg}$', color='b')
-    plt.arrow(xc, yc, xpp3 - 2 - xc, ypp3 - 5 - yc, head_length=4, head_width=2, color='r')
-    plt.text(61, 40, r'$\mathbf{P^{\prime}}$', color='r')
+    # plt.arrow(0, 0, xpp3 - 3, ypp3 - 3, head_length=4, head_width=2, color='b')
+    # plt.text(45, 50, r'$\mathbf{Pg}$', color='b')
+    # plt.arrow(xc, yc, xpp3 - 2 - xc, ypp3 - 5 - yc, head_length=4, head_width=2, color='r')
+    # plt.text(61, 40, r'$\mathbf{P^{\prime}}$', color='r')
 
-    plt.arrow(xc, yc, xp - 4, yp, head_length=4, head_width=2, color='k')
-    plt.text(80, yc - 2, r'$\mathbf{P}$', color='k')
+    # plt.arrow(xc, yc, xp - 4, yp, head_length=4, head_width=2, color='k')
+    # plt.text(80, yc - 2, r'$\mathbf{P}$', color='k')
 
     plt.show()
